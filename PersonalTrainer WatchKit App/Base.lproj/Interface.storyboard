@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2cv-Gv-OAt">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--MenuInterfaceController-->
+        <scene sceneID="4k6-WI-4I2">
+            <objects>
+                <controller identifier="MenuInterfaceController" id="2cv-Gv-OAt" customClass="MenuInterfaceController" customModule="PersonalTrainer_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Pick out an activity" textAlignment="center" id="qCm-RG-y8Q">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <button width="1" height="25.5" alignment="left" title="twists" id="fCL-qP-Xot">
+                            <connections>
+                                <action selector="goTwisting" destination="2cv-Gv-OAt" id="fOh-3b-WyO"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="21.5" alignment="left" title="crunches" id="SVT-KM-n5C">
+                            <connections>
+                                <action selector="goCrunching" destination="2cv-Gv-OAt" id="l4p-2L-qvK"/>
+                            </connections>
+                        </button>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="vHl-E5-g8t">
+                            <connections>
+                                <action selector="setRepeatsNumber:" destination="2cv-Gv-OAt" id="xoi-Hd-2P9"/>
+                            </connections>
+                        </slider>
+                        <label width="136" alignment="left" text="Repeats: 1" id="OMJ-cm-fAa">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="repeatsLabel" destination="OMJ-cm-fAa" id="2bk-ZF-Cuf"/>
+                        <outlet property="slider" destination="vHl-E5-g8t" id="qn8-Uj-a7L"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="126"/>
+        </scene>
+        <!--InterfaceController-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PersonalTrainer_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="136" height="84" alignment="left" id="7FM-qy-yJW"/>
+                        <label alignment="left" id="uFH-pB-e5L"/>
+                        <label width="125.5" alignment="left" id="Mv3-y1-Nco"/>
+                        <label width="131" alignment="left" text=" " textAlignment="center" id="mXh-Sz-0ao"/>
+                    </items>
+                    <connections>
+                        <outlet property="congratsLabel" destination="mXh-Sz-0ao" id="cM8-6Y-NzA"/>
+                        <outlet property="image" destination="7FM-qy-yJW" id="ivn-9G-tEx"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="427"/>
+        </scene>
+    </scenes>
+</document>
